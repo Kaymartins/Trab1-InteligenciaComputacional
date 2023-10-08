@@ -7,12 +7,11 @@
 
 class Graph {
     private:
-        int numEdges;
         int totalOfEdges;
         int uncoveredEdges;
-
+    
     public:
-        
+
 
         
 };

@@ -16,7 +16,7 @@ class Edge{
         Node* getDestination();
         double getTd();
         double getDistance();
-
+        void setDistance();
 };
 
 #endif // EDGE_H
