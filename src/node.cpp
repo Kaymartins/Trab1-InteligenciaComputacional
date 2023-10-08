@@ -37,3 +37,12 @@ bool Node::isHotel(){
     return this->hotel;
 }
 
+bool Node::canBeVisited(){
+    if(!this->isHotel() && this->isVisited()){
+        return false;
+    }
+
+    return true;
+
+}
+

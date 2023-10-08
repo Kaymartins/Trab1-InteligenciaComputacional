@@ -19,6 +19,7 @@ class Node{
         bool isHotel();
         void markVisited();
         bool isVisited();
+        bool canBeVisited();
 };
 
 #endif // NODE_H

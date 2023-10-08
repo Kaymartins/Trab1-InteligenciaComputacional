@@ -2,14 +2,16 @@
 #define GRAPH_H
 
 #include <vector>
-#include <string>
-#include <map>
+#include "Node.h"
+#include "Edge.h"
 
 class Graph {
     private:
-        int totalOfEdges;
-        int uncoveredEdges;
-    
+        std::vector<Node> nodes;//list of vertices
+        std::vector<Edge> edges;//list of edges
+
+        
+
     public:
 
 
