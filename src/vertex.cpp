@@ -19,6 +19,35 @@ int Vertex::getId() {
     return id;
 }
 
+int Vertex::getX() {
+    return x;
+}
+
+int Vertex::getY() {
+    return y;
+}
+
+int Vertex::getScore() {
+    return score;
+}
+
+
+void Vertex::markAsHotel(){
+    this->hotel = true;
+}
+
+bool Vertex::getIsHotel(){
+    return this->hotel;
+}
+
+void Vertex::markVisited(){
+    this->visited = true;
+}
+
+bool Vertex::isVisited(){
+    return this->visited;
+}
+
 void Vertex::addNode(Node* node) {
     nodes.push_back(node);
 }
