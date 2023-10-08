@@ -1,15 +1,13 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include "vertex.h"
-
-//herança da classe Vertex, é possível acessar os atributos e métodos da classe Vertex a partir da classe Node
+//class node represents the vertice conjuntion of the graph that can represents both a hotel or a node
 class Node{
     private:
         int id;
         int score;
-        int x;//coordenada x
-        int y;//coordenada y
+        int x;//coordenate x
+        int y;//coordenate y
         bool visited;
         bool hotel;
     public:
