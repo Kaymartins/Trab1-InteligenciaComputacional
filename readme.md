@@ -1,4 +1,11 @@
 # Descrição do Problema:
+O Problema de Orientação (PO) é um problema de otimização combinatória que foi proposto em 1984.
+Considere um grafo completo em que cada um de seus vértices tenha uma pontuação específica e possa ser
+visitado no máximo uma vez. O OP visa descobrir um caminho, limitado no tempo, com pontuação máxima
+neste gráfico. O caminho deve ser iniciado e finalizado em vértices específicos. Diferentes variantes deste
+problema foram definidas adicionando novas restrições às condições originais. O Problema de Orientação
+com Seleção de Hotéis (OPHS) é uma das formas mais recentes do OP.
+
 Considere um grafo completo G=(V, E), no qual V é o conjunto de vértices e E é o conjunto de
 arestas. O conjunto de vértices inclui h hotéis e n nós. Uma pontuação específica é atribuída a cada nó,
 representada por for si; a visitação a um hotel, porém, não tem pontuação. Existem dois tipos de caminhos
