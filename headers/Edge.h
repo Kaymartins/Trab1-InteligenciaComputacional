@@ -6,11 +6,10 @@ class Edge{
     private:
         Node* source;
         Node* destination;
-        double Td; //trip lenght for each trip d
         double distance;
 
     public:
-        Edge(Node* source, Node* destination, double Td);
+        Edge(Node* source, Node* destination);
         ~Edge();
         Node* getSource();
         Node* getDestination();

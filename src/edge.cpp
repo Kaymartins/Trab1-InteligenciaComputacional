@@ -1,10 +1,9 @@
 #include "../headers/Edge.h"
 #include <cmath>
 
-Edge::Edge(Node* source, Node* destination, double Td){
+Edge::Edge(Node* source, Node* destination){
     this->source = source;
     this->destination = destination;
-    this->Td = Td;
     setDistance();
 }
 
@@ -19,10 +18,6 @@ Node* Edge::getSource(){
 
 Node* Edge::getDestination(){
     return this->destination;
-}
-
-double Edge::getTd(){
-    return this->Td;
 }
 
 double Edge::getDistance(){
