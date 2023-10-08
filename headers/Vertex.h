@@ -9,13 +9,19 @@ class Hotel; // Forward declaration
 class Vertex{
     protected:
         int id;
-        std::vector<Node*> nodes;
-        std::vector<Hotel*> hotels;
+        int x; // x coordinate
+        int y; // y coordinate
+        int score;
+        std::vector<Node*> nodes;//list of associated nodes
+        std::vector<Hotel*> hotels;//list of associated hotels
 
     public:
         Vertex(int id);//constructor
         ~Vertex();
         int getId();
+        int getX();
+        int getY();
+        int getScore();
         void addNode(Node* node);// add node to the vertice
         void addHotel(Hotel* hotel);// add hotel to the vertice
         std::vector<Node*> getNodes();// get all nodes from the vertice
