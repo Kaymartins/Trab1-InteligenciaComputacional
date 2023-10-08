@@ -19,3 +19,7 @@ Embora um tour deva visitar cada nó no máximo uma vez, não há nenhuma restri
 número de vezes que os hotéis podem ser visitados. O objetivo é encontrar um tour com pontuação máxima
 contendo um número fixo de trips. Neste trabalho, a distância euclidiana entre cada par de vértices será
 considerada como o tempo necessário para viajar entre eles.
+
+
+# Link com instancias teste : 
+https://www.mech.kuleuven.be/en/cib/op#section-14
