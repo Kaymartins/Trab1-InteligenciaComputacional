@@ -1,10 +1,16 @@
 #include "../headers/Edge.h"
 #include <cmath>
+#include <iostream>
+using namespace std;
 
 Edge::Edge(Node* source, Node* destination){
+    cout << "Edge constructor called" << endl;
     this->source = source;
+    cout << "source set" << endl;
     this->destination = destination;
+    cout << "destination set" << endl;
     setDistance();
+    cout << "distance set" << endl;
 }
 
 Edge::~Edge(){
