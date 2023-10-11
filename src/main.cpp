@@ -58,11 +58,10 @@ Graph* readyGeedy(string filename){
         graph->addNode(id, score, x, y, isHotel);
     }
 
-    std::vector<Node> source = graph->getNodes();
-    cout << "graph created successfully" <<  "number of nodes: " << source.size() << endl;
-
     file.close();
+    cout << "file closed" << endl;
 
+    // graph->printGraph("graph.dot");
 
     return graph;
 }
