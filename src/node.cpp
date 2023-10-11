@@ -1,5 +1,6 @@
 #include "../headers/Node.h"
 #include <cmath>
+#include <iostream>
 
 Node::Node(int id, int score, int x, int y, bool isHotel){
     this->firstEdge = nullptr;
@@ -20,10 +21,6 @@ Edge* Node::getLastEdge(){
     return this->lastEdge;
 }
 
-std::vector<Edge> Node::getEdges(){
-    return this->edges;
-}
-
 void Node::addEdge(Node* target){
 
     if(this->searchEdge(target->getId()) != nullptr){
@@ -38,7 +35,6 @@ void Node::addEdge(Node* target){
         this->lastEdge->setNextEdge(newEdge);
         this->lastEdge = newEdge;
     }
-    this->edges.push_back(*newEdge);
 }
 
 Edge* Node::searchEdge(int id){
@@ -104,6 +100,17 @@ bool Node::canBeVisited(){
     }
 
     return true;
-
 }
+
+std::vector<Edge*> Node::getEdges(){
+    Edge* currentEdge = this->firstEdge;
+    std::vector<Edge*> edges;
+    while(currentEdge != nullptr){
+        edges.push_back(currentEdge);
+        currentEdge = currentEdge->getNextEdge();
+    }
+    return edges;
+}
+
+
 

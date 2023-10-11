@@ -22,7 +22,7 @@ class Graph {
         void setTd(std::vector<double> Td);//set the trip distance
         void setNumberOfTrips(int numberOfTrips);//set the number of trips
         std::vector<Node> getNodes();//get the list of nodes
-        std::vector<Edge> getEdges();//get the list of edges
+        std::vector<Edge*> getEdges();//get the list of edges
         
 };
 // Rest of the code goes here

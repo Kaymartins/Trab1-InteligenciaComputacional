@@ -18,6 +18,7 @@ void Graph::addNode(int id, int score, int x, int y, bool isHotel){
         for(int i = 0; i < size - 1; i++){
             //create an edge between the new node and the others nodes
             newNode.addEdge(&this->nodes[i]);
+            this->nodes[i].addEdge(&newNode);
         }
     }
 }
@@ -34,7 +35,22 @@ std::vector<Node> Graph::getNodes(){
     return this->nodes;
 }
 
+
 void Graph::setNumberOfTrips(int numberOfTrips){
     this->numberOfTrips = numberOfTrips;
+}
+
+std::vector<Edge*> Graph::getEdges(){
+    std::vector<Node> nodes = this->getNodes();
+    std::vector<Edge*> edges;
+    for(int i = 0; i < nodes.size(); i++){
+        std::vector<Edge*> nodeEdges = nodes[i].getEdges();
+        for(int j = 0; j < nodeEdges.size(); j++){
+            edges.push_back(nodeEdges[j]);
+        }
+    }
+
+
+    return edges;
 }
 

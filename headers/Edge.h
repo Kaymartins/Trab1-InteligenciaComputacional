@@ -1,21 +1,22 @@
 #ifndef EDGE_H
 #define EDGE_H
-#include "../headers/Node.h"
 
 class Edge{
     private:
-        Node* source;
-        Node* destination;
+        int targetId;
+        int originId;
+        Edge* nextEdge;
         double distance;
+        bool marked;
 
     public:
-        Edge(Node* source, Node* destination);
+        Edge(int targetId, int originId, double distance);
         ~Edge();
-        Node* getSource();
-        Node* getDestination();
-        double getTd();
+        int getTargetId();
+        Edge* getNextEdge();
+        double getOriginId();
+        void setNextEdge(Edge* nextEdge);
         double getDistance();
-        void setDistance();
 };
 
 #endif // EDGE_H

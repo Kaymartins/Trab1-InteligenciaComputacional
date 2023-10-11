@@ -61,7 +61,12 @@ Graph* readyGeedy(string filename){
     file.close();
     cout << "file closed" << endl;
 
-    // graph->printGraph("graph.dot");
+    //estava testando a criação de arestas, elas estao sendo criadas corretamente assim como o nó, porem elas nao sao duplicadas, ou seja, se eu crio uma aresta entre o nó 1 e 2, ela nao é criada entre o 2 e o 1
+    //entao se for buscar uma aresta entre 2 nós teria que testar com os 2 valores, ou seja, 1-2 e 2-1 (que no caso esta buscando a mesma aresta ja que nao tem restrição de direcionamento).
+    std::vector<Edge*> edges = graph->getEdges();
+    for(int i = 0; i < edges.size(); i++){
+        cout << edges[i]->getOriginId() << " " << edges[i]->getTargetId() << " " << edges[i]->getDistance() << endl;
+    }
 
     return graph;
 }
